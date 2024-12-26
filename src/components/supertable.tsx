@@ -3,7 +3,14 @@ import { useReactTable, getCoreRowModel, getFilteredRowModel } from "@tanstack/r
 import { flexRender } from "@tanstack/react-table";
 import { GlobalFilter } from "./GlobalFilter"; // adjust path as needed
 
-export function BuildsTable({ data, columns }) {
+import { ColumnDef } from "@tanstack/react-table";
+
+interface BuildsTableProps {
+    data: any[];
+    columns: ColumnDef<any, any>[];
+}
+
+export function BuildsTable({ data, columns }: BuildsTableProps) {
     const [globalFilter, setGlobalFilter] = useState("");
     const table = useReactTable({
         data,

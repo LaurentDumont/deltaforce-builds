@@ -62,7 +62,7 @@ export default function Home() {
                 header: "Picture",
                 accessorKey: "picture",
                 cell: ({ getValue }) => (
-                    <img src={getValue<string>()} alt="Build" width={100} height={100} />
+                    <img src={getValue()} alt="Build" width={100} height={100} />
                 ),
             },
             {
