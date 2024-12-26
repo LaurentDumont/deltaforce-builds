@@ -24,7 +24,11 @@ export default function Home() {
                 const data = await response.json();
                 setBuilds(data);
             } catch (err) {
-                setError(err.message);
+                if (err instanceof Error) {
+                    setError(err.message);
+                } else {
+                    setError("An unknown error occurred");
+                }
             } finally {
                 setLoading(false);
             }
