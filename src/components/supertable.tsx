@@ -6,7 +6,9 @@ import { GlobalFilter } from "./GlobalFilter"; // adjust path as needed
 import { ColumnDef } from "@tanstack/react-table";
 
 interface BuildsTableProps {
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
     data: any[];
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
     columns: ColumnDef<any, any>[];
 }
 
