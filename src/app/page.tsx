@@ -46,11 +46,11 @@ export default function Home() {
             {
                 header: "Link",
                 accessorKey: "link",
-                cell: ({ getValue }) => (
+                cell: ({ getValue }: { getValue: () => string }) => (
                     <div className="flex items-center">
-                        <span>{getValue<string>()}</span>
+                        <span>{getValue()}</span>
                         <button
-                            onClick={() => navigator.clipboard.writeText(getValue<string>())}
+                            onClick={() => navigator.clipboard.writeText(getValue())}
                             className="ml-2 p-1 bg-blue-500 text-white rounded"
                         >
                             Copy
